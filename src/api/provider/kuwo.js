@@ -224,10 +224,11 @@ function kw_render_playlist_result_item(item) {
 function bootstrapTrack(trackId) {
   const songId = trackId.slice('kwtrack_'.length);
 
-  const target_url = `${
-    'http://antiserver.kuwo.cn/anti.s?' +
-    'type=convert_url&format=mp3&response=url&rid='
-  }${songId}`;
+  //const target_url = `${
+  //  'https://antiserver.kuwo.cn/anti.s?' +
+  //  'type=convert_url&format=mp3&response=url&rid='
+  //}${songId}`;
+  const target_url = `http://www.kuwo.cn/api/v1/www/music/playUrl?mid=${song_id}&type=convert_url3&br=128kmp3`;
 
   return fetch(target_url, {
     headers: {
